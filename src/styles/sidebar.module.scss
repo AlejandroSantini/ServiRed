@@ -1,0 +1,101 @@
+.sidebarCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+    color: var(--text-primary);
+    margin: 0;
+  }
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .statRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+
+    span:first-child {
+      color: var(--text-secondary);
+    }
+    span:last-child {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+  }
+
+  .starsAverage {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #b45309; // Amber-700
+    margin-top: 6px;
+    padding: 8px;
+    background: #fef3c7; // Amber-100
+    border-radius: var(--border-radius-sm);
+    justify-content: center;
+    border: 1px solid #fde68a;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 13px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+
+    &:focus {
+      border-color: var(--accent-primary);
+    }
+  }
+}
+
+.btnPrimary {
+  background: var(--accent-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: var(--accent-primary-hover);
+  }
+}

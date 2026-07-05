@@ -1,0 +1,338 @@
+.solicitudDetailCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.detailHeader {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+}
+
+.detailHeaderFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.detailHeaderTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid transparent;
+
+  &.abierta, &.emitido {
+    background: #ecfdf5; // Green-50
+    color: #047857; // Green-700
+    border-color: #a7f3d0;
+  }
+
+  &.cerrada, &.aceptado {
+    background: #f1f5f9; // Slate-100
+    color: #475569; // Slate-600
+    border-color: #cbd5e1;
+  }
+
+  &.rechazado {
+    background: #fef2f2; // Red-50
+    color: #b91c1c; // Red-700
+    border-color: #fca5a5;
+  }
+}
+
+.validityTextRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.detailBodyContainer {
+  margin-top: 12px;
+}
+
+.requestDescription {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.budgetSection {
+  margin-top: 10px;
+}
+
+.sectionTitle {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+  color: var(--text-primary);
+  margin-top: 0;
+}
+
+.emptyStateContainer {
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.budgetsLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+// Tabla Comparativa
+.comparisonTable {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.comparisonHeader {
+  display: grid;
+  grid-template-columns: 140px 1fr 130px 100px 120px;
+  gap: 12px;
+  padding: 10px 14px;
+  background: #f8fafc; // Slate-50
+  border-bottom: 1px solid var(--border-color);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.comparisonRow {
+  display: grid;
+  grid-template-columns: 140px 1fr 130px 100px 120px;
+  gap: 12px;
+  padding: 14px;
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+  transition: background 0.15s ease;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background: #f8fafc;
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .cellProvider {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    strong {
+      font-size: 13px;
+      color: var(--text-primary);
+    }
+  }
+
+  .cellDetails {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    p {
+      margin: 0;
+    }
+  }
+
+  .cellValidity {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .cellPrice {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+
+    @media (max-width: 900px) {
+      align-items: flex-start;
+    }
+
+    .price {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+  }
+
+  .cellActions {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+
+    @media (max-width: 900px) {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.badgeEco {
+  font-size: 9px;
+  font-weight: 700;
+  color: #166534; // Green-800
+  background: #dcfce7; // Green-100
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+// Acordeón
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.collapsibleHeader {
+  background: #f1f5f9;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: #e2e8f0;
+    color: var(--text-primary);
+  }
+}
+
+.accordionBody {
+  margin-top: 10px;
+  padding: 10px 0;
+}
+
+.inactiveRow {
+  background: #f8fafc;
+  opacity: 0.75;
+}
+
+.textVencidoWarning {
+  display: inline-block;
+  background: #fef2f2;
+  color: #991b1b;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.providerBudgetSection {
+  margin-top: 20px;
+}
+
+.badgePresupuestadoCentrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--border-radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btnPrimaryFull {
+  background: var(--accent-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: var(--accent-primary-hover);
+  }
+}
+
+.btnPrimaryCompact {
+  background: var(--accent-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: var(--accent-primary-hover);
+  }
+}
+
+.btnDangerCompact {
+  background: #ef4444;
+  color: #ffffff;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #dc2626;
+  }
+}
