@@ -1,0 +1,24 @@
+{
+  "name": "servired-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "API REST de ServiRed (SRV) – Trabajo de Diploma UAI",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node --watch --env-file=.env src/server.js",
+    "start": "node --env-file=.env src/server.js",
+    "test": "node --test",
+    "db:inicializar": "node --env-file=.env scripts/inicializarBase.js",
+    "demo": "PERSISTENCIA=memoria DEMO=true ADMIN_EMAIL=admin@demo.test ADMIN_CONTRASENA=Demo2026x node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.2.17"
+  }
+}

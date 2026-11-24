@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: servired
+      POSTGRES_USER: servired
+      POSTGRES_PASSWORD: servired
+    ports:
+      - "5432:5432"
+    volumes:
+      - datos-servired:/var/lib/postgresql/data
+
+volumes:
+  datos-servired:
